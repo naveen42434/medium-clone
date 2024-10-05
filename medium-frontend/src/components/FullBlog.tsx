@@ -2,7 +2,7 @@ import {AppBar} from "./AppBar.tsx";
 import {Blog} from "../hooks";
 import {Avatar} from "./BlogCard.tsx";
 
-export const FullBlog = ({ blog }: {blog : Blog}) => {
+export const FullBlog = ({ blog }: {blog: Blog}) => {
     return <div>
         <AppBar/>
         <div className="flex justify-center">

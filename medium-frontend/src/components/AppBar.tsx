@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const AppBar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const dropdownRef = useRef(null);
+    const dropdownRef = useRef<HTMLDivElement | null>(null);
     const navigate = useNavigate();
 
     const handleSignOut = () => {

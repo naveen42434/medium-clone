@@ -17,12 +17,15 @@ export const Blog = () => {
 
     const {id} = useParams();
     const {loading, blog} = useBlog({
-        id : id || ""
+        id: id || ""
     });
     if (loading) {
         return <div>
             <FullBlogSkeleton/>
         </div>
+    }
+    if (!blog) {
+        return <div>No blog found.</div>;
     }
     return <div>
         <FullBlog blog={ blog }/>

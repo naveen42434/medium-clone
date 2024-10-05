@@ -3,12 +3,6 @@ import {ChangeEvent, useState} from "react";
 import axios from "axios";
 import {BACKEND_URL} from "../config.ts";
 
-type PostInputs = {
-    username: string;
-    name: string;
-    password: string;
-};
-
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
     const navigate = useNavigate()
     const [postInputs,setPostInputs] = useState({
@@ -86,6 +80,6 @@ function LabelledInput({label,placeholder,onChange,type}:LabelledInputType){
     </div>
 }
 
-function Button({label,onClick}){
+function Button({label,onClick}:{label:string,onClick: () => void }){
     return <button onClick={onClick} type="button" className="w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-4">{label}</button>
 }

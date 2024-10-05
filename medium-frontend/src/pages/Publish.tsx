@@ -1,7 +1,7 @@
 import {AppBar} from "../components/AppBar.tsx";
 import axios from "axios";
 import {BACKEND_URL} from "../config.ts";
-import {ChangeEvent, ChangeEventHandler, useEffect, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 export const Publish = () => {
@@ -45,15 +45,10 @@ export const Publish = () => {
                             );
                             navigate(`/blog/${response.data.id}`);
                         } catch (error) {
-                            if (error.response) {
-                                console.error("Error response:", error.response.data);
-                                alert(`Failed to publish the post: ${error.response.data.message}`);
-                            } else {
-                                console.error("Error:", error.message);
-                                alert(`Failed to publish the post: ${error.message}`);
+                                alert(`Failed to publish the post`);
                             }
                         }
-                    }}
+                    }
                     type="submit"
                     className="mt-4 inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
                 >

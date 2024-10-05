@@ -11,7 +11,7 @@ function App() {
       <>
           <BrowserRouter>
               <Routes>
-                  <Route path="/" element={localStorage.getItem("token") ? <blogs/> : <Signin/>}/>
+                  <Route path="/" element={localStorage.getItem("token") ? <Blogs/> : <Signin/>}/>
                   <Route path="/signup" element={<Signup/>}/>
                   <Route path="/signin" element={<Signin/>}/>
                   <Route path="/blog/:id" element={<Blog/>}/>
