@@ -9,7 +9,10 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:5173",
-    "https://familiar-gertruda-student-cit-c4d3a108.koyeb.app"
+    "https://familiar-gertruda-student-cit-c4d3a108.koyeb.app",
+    "https://medium-clone-git-main-naveenkumars-projects-0bc3db22.vercel.app",
+    "https://medium-clone-ashen-iota.vercel.app",
+    "https://medium-clone-r7p5s24xs-naveenkumars-projects-0bc3db22.vercel.app"
 ]
 
 app.add_middleware(
